@@ -16,5 +16,7 @@ const lexOrderSubstring = (arr1, arr2) => {
             }
         }
     }
-return result.sort();
+    result.sort()
+    let unique = [...new Set(result)]
+return unique
 }
