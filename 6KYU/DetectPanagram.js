@@ -46,7 +46,7 @@ function isPangram(string) {
     .sort();
 
   let unique = [...new Set(array)];
-  console.log("unique", unique);
+
   if (unique.length < 26) {
     return false;
   }
