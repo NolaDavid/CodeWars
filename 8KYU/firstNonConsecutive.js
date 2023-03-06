@@ -20,16 +20,14 @@ Python, Rust, Scala: None
 Julia: nothing
 Nim: none(int) (See options)
  */
-function firstNonConsecutive (arr) {
-    if(arr.length <= 1){
-      
-      return null;
+function firstNonConsecutive(arr) {
+  let start = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    const nextTotal = start + 1;
+    if (nextTotal !== arr[i]) {
+      return arr[i];
     }
-  for(let i = 0; i < arr.length; i++){
-    
-    if(arr[i] !== i + 1){
-      return arr[i]
-    }
+    start++;
   }
-    return null;
-  }
+  return null;
+}
